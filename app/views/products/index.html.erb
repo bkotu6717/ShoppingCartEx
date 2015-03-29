@@ -1,0 +1,16 @@
+<p>
+	Listing all the Products
+</p>
+
+<table>
+	<thead>
+		<th> ID </th> <td> Name </td> <td>Unit Price</td>
+	</thead>
+	<tbody>
+		<% for product in @products %>
+		<tr>
+			<td><%= product.id %></td><td><%= product.name %></td><td><%= product.price %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
