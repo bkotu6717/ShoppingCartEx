@@ -15,12 +15,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<p class='lead' align="right">
-		<%= link_to "#{current_order.order_items.size} Items in Cart ( #{number_to_currency current_order.subtotal} )", carts_show_path, class: "btn btn-link" %>
-	</p>
-<div class="container">
-	<%= yield %>
-</div>
-
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8"><h1>My Store</h1></div>
+			<div class="col-md-4 text-right">
+				<%= link_to "#{current_order.order_items.size} Items in Cart ( #{number_to_currency current_order.subtotal} )", carts_show_path, class: "btn btn-link" %>
+			</div>
+		</div>
+		<%= yield %>
+	</div>
 </body>
 </html>
